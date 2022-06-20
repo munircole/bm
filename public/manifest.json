@@ -1,0 +1,8 @@
+{
+  "short_name": "BM",
+  "name": "Bookishmate",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ede0f4",
+  "background_color": "#ede0f4"
+}
