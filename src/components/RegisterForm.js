@@ -322,7 +322,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
                 inputRef={register}
                 name="institutionType"
                 type="text"
-                placeholder="university"
+                placeholder="E.g: university"
                 label="Type Of Institution"
                 variant="outlined"
                 size="small"
@@ -374,7 +374,8 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
                 inputRef={register}
                 name="department"
                 type="text"
-                label="Department"
+                label=" Department"
+                placeholder="E.g: Computer Science"
                 variant="outlined"
                 size="small"
                 error={'department' in errors}
