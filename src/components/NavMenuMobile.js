@@ -101,7 +101,16 @@ const MobileNavMenu = () => {
 
           <MenuItem>
             <WebIcon className={classes.menuIcon} />
-           <RouterLink to={{pathname:"https://bookishmate.blog"}} target="_blank">Blog</RouterLink>
+           <RouterLink to={{pathname:"https://bookishmate.blog"}} target="_blank" style={{textDecoration:"none", color:"black" }}>Blog</RouterLink>
+          </MenuItem>
+
+          <MenuItem
+            selected={pathname.startsWith('/give-us-feedback')}
+            component={RouterLink}
+            to="/give-us-feedback"
+          >
+            <InfoIcon className={classes.menuIcon} />
+            Feedback
           </MenuItem>
 
 

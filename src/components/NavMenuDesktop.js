@@ -69,14 +69,20 @@ const DesktopNavMenu = () => {
             About
           </MenuItem>
 
-          <MenuItem
-            selected={pathname.startsWith('/blog')}
-            component={RouterLink}
-            to="/blog"
-          >
+          <MenuItem>
             <WebIcon className={classes.menuIcon} />
-            Blog
+           <RouterLink to={{pathname:"https://bookishmate.blog"}} target="_blank" style={{textDecoration:"none", color:"black" }}>Blog</RouterLink>
           </MenuItem>
+
+          <MenuItem
+            selected={pathname.startsWith('/give-us-feedback')}
+            component={RouterLink}
+            to="/give-us-feedback"
+          >
+            <InfoIcon className={classes.menuIcon} />
+            Feedback
+          </MenuItem>
+
 
 
 

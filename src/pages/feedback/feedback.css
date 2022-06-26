@@ -1,0 +1,52 @@
+.container{
+    margin-top: 50px;
+}
+
+.contactForm{
+    display: flex;
+    justify-content: center;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+.center{
+    height: 100px;
+    width: 100px;
+}
+
+.button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    height:50px;
+    width:150px;
+    color: white;
+    border:1px solid green;
+    text-transform: uppercase;
+    background-color: green;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

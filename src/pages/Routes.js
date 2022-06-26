@@ -15,6 +15,8 @@ import { Container, Grid } from '@material-ui/core';
 import Privacy from './privacy-policy/privacy';
 import Terms from './terms/terms';
 import Contact from './contact/contact';
+import Feedback from './feedback/feedback';
+
 import Library from './library/library';
 import Ad from './advertising/ad';
 
@@ -96,6 +98,11 @@ const Routes = () => {
           <Route exact path="/contact-us">
             <Contact/>
           </Route>
+
+          <Route exact path="/give-us-feedback">
+            <Feedback/>
+          </Route>
+
 
           <Route exact path="/library">
             <NavMenuDesktop />

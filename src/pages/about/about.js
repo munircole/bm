@@ -26,7 +26,7 @@ class About extends Component {
 
                                 <div className="section">
                                     <h1 className="text-center" id="library" >BM E-Library</h1>
-                                    <p className="text-center">With BM library, you can download  and read arxiv ebooks here for free, arXiv has over 1,945,078 scholarly articles in the fields of physics, mathematics, computer science, quantitative biology, quantitative finance, statistics, electrical engineering and systems science, and economics.</p>
+                                    <p className="text-center">With BM library, you can get  and read ebooks from google here for free, with BM Library, you can search for any type of book for academic or research purposes, you can search and read books on  computer science, quantitative biology, quantitative finance, statistics, electric, literature, and many more.</p>
                                 </div>
 
                             </div>

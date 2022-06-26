@@ -105,6 +105,7 @@ h4{
 
 #footer .footer-top .footer-links ul a{
     color: #fff;
+    text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul a:hover{
