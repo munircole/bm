@@ -32,7 +32,7 @@ const DesktopNavMenu = () => {
             to="/"
           >
             <PublicIcon className={classes.menuIcon} />
-            Public
+            Home
           </MenuItem>
           <MenuItem
             selected={pathname.startsWith('/tag')}

@@ -59,7 +59,7 @@ const MobileNavMenu = () => {
           onClick={handleCloseMenu}
         >
           <PublicIcon className={classes.menuIcon} />
-          Bokishmate
+          Home
         </MenuItem>
         <MenuItem
           selected={pathname.startsWith('/tag')}

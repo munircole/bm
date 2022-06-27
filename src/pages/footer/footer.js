@@ -71,8 +71,8 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-3 col-md-6 footer-contact">
                                     <h4>Contact Us</h4>
-                                    <h5>contact@mybookishmate.com</h5>
-                                    <h5>Tel: +2348139735791</h5>
+                                    <h5>contact@bookishmate.com</h5>
+                                    <h5>Tel: +2349160835064</h5>
                                     <div className="social-links">
                                         <Link to="#" className="twitter"><i className="fas fa-twitter"></i></Link>
                                         <Link to="#" className="facebook"><i className="fas fa-facebook"></i></Link>
