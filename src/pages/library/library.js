@@ -57,7 +57,7 @@ export default function Library() {
       <br/>
 
       {books && books.map((book, index) => (
-        <a key={index} href={book.volumeInfo.previewLink} target="_blank" className="books">
+        <a key={index} href={book.volumeInfo.previewLink} target="_blank" rel="noreferrer" className="books">
         <img src= {book.volumeInfo.imageLinks?.thumbnail} alt=""/>
         </a>
       ))}
