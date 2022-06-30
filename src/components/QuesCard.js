@@ -2,6 +2,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import PostedByUser from './PostedByUser';
 
 import { Paper, Typography, Chip } from '@material-ui/core';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import { useQuesCardStyles } from '../styles/muiStyles';
 
 const QuesCard = ({ question }) => {
@@ -39,7 +40,7 @@ const QuesCard = ({ question }) => {
           <Typography variant="caption">answers</Typography>
         </div>
         <Typography variant="caption" noWrap>
-          {views} views
+          {views} <VisibilityIcon/>
         </Typography>
         
       </div>

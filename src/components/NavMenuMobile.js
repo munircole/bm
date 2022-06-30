@@ -82,9 +82,9 @@ const MobileNavMenu = () => {
           Users
         </MenuItem>
         <MenuItem
-            selected={pathname.startsWith('/tag')}
+            selected={pathname.startsWith('/library')}
             component={RouterLink}
-            to="/tags"
+            to="/library"
           >
             <LibraryBooksIcon className={classes.menuIcon} />
             BM Libbrary

@@ -8,10 +8,6 @@ import './contact.css'
 
 export default function Contact()  {
 
-    function refreshPage() {
-        window.location.reload(false);
-      }
-
       
     const {  notify } = useStateContext();
 
@@ -34,7 +30,6 @@ export default function Contact()  {
             .then((response) => { 
               console.log('SUCCESS!', response.status, response.text);
               notify('Sent!');
-              refreshPage()
 
             })
             .catch((err) => {

@@ -7,7 +7,7 @@ import UserMenuDesktop from './UserMenuDesktop';
 import SearchBar from './SearchBar';
 import DarkModeSwitch from './DarkModeSwitch';
 import { useAuthContext } from '../context/auth';
-import logo1 from '../images/logo1.jpg';
+import logo1 from '../images/logo1.png';
 
 import {
   AppBar,
@@ -60,7 +60,7 @@ const NavBar = () => {
                     component={RouterLink}
                     to="/"
                   >
-                    <img src={logo1} width="125px" alt="BM logo" />
+                    <img src={logo1} width="125px"  alt="BM logo" />
                   </IconButton>
                 ) : (
                   <Button

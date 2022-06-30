@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
+import logo1 from '../../images/logo1.png';
 
 
 
@@ -15,7 +16,7 @@ class Footer extends Component {
 
         };
     }
-
+    
 
 
     render() {
@@ -40,12 +41,12 @@ class Footer extends Component {
 
                             <div className="row">
                                 <div className="col-lg-4 col-md-6 footer-info">
-                                    <h4>BOOKISH-MATE</h4>
+                                <img src={logo1} width="125px"  alt="BM logo" />
                                     <p>Ask questions and get answers to your  homeworks and assignments from other students, find private tutors,search and read books here for free
                                      </p>
                                 </div>
                                 <div className="col-lg-3 col-md-6 footer-links">
-                                    <h4>BOOKISH MATE </h4>
+                                    <h4>Menu</h4>
                                     <ul>
                                         <li><Link to="/">Questions</Link></li>
                                         <li><Link to="/library">BM Library</Link></li>
