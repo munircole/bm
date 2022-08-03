@@ -1,3 +1,3 @@
-const backendUrl = 'http://bookishmate.com/apibookish';
+const backendUrl = 'http://localhost:5000';
 
 export default backendUrl;
