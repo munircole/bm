@@ -22,6 +22,8 @@ export default function Library() {
 
 
  const handleSubmit = (e) => {
+  notify('Seaching.....');
+
     e.preventDefault();
 
     axios.get("https://www.googleapis.com/books/v1/volumes?q="+search+"&key="+apiKey+"&maxResults=40")           

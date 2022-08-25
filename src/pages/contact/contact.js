@@ -20,6 +20,8 @@ export default function Contact()  {
       });
     
       const onSubmit = (e) => {
+        notify('Submitting .....');
+
         e.preventDefault();
         send(
             'service_u8mty5j',

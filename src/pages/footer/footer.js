@@ -42,7 +42,7 @@ class Footer extends Component {
                             <div className="row">
                                 <div className="col-lg-4 col-md-6 footer-info">
                                 <img src={logo1} width="125px"  alt="BM logo" />
-                                    <p>Ask questions and get answers to your  homeworks and assignments from other students, find private tutors,search and read books here for free
+                                    <p>Ask questions and get answers to your  homeworks and assignments from other students, search and read books here for free
                                      </p>
                                 </div>
                                 <div className="col-lg-3 col-md-6 footer-links">
@@ -72,8 +72,8 @@ class Footer extends Component {
                                 </div>
                                 <div className="col-lg-3 col-md-6 footer-contact">
                                     <h4>Contact Us</h4>
-                                    <h5>contact@bookishmate.com</h5>
-                                    <h5>Tel: +2349160835064</h5>
+                                    <h5>Bookishtechnologies@gmail.com</h5>
+                                    <h5>Tel: +2348139735791</h5>
                                     <div className="social-links">
                                         <Link to="#" className="twitter"><i className="fas fa-twitter"></i></Link>
                                         <Link to="#" className="facebook"><i className="fas fa-facebook"></i></Link>

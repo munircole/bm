@@ -87,7 +87,7 @@ const MobileNavMenu = () => {
             to="/library"
           >
             <LibraryBooksIcon className={classes.menuIcon} />
-            BM Libbrary
+            BM Library
           </MenuItem>
 
           <MenuItem

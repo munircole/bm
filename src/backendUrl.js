@@ -1,3 +1,3 @@
-const backendUrl = 'http://bookishmate.com/apibookish';
+const backendUrl = 'https://morning-anchorage-85457.herokuapp.com/';
 
 export default backendUrl;

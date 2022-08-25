@@ -19,6 +19,8 @@ export default function Feedback() {
       });
     
       const onSubmit = (e) => {
+        notify('Submitting Feedback .....');
+
         e.preventDefault();
         send(
             'service_u8mty5j',
