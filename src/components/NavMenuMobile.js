@@ -16,6 +16,9 @@ import PeopleIcon from '@material-ui/icons/People';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import InfoIcon from '@material-ui/icons/Info';
 import WebIcon from '@material-ui/icons/Web';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import RedeemIcon from '@material-ui/icons/Redeem';
+
 
 
 const MobileNavMenu = () => {
@@ -53,7 +56,6 @@ const MobileNavMenu = () => {
             pathname === '/' ||
             (!pathname.startsWith('/tag') && !pathname.startsWith('/user'))
           }
-          dense
           component={RouterLink}
           to="/"
           onClick={handleCloseMenu}
@@ -63,7 +65,6 @@ const MobileNavMenu = () => {
         </MenuItem>
         <MenuItem
           selected={pathname.startsWith('/tag')}
-          dense
           component={RouterLink}
           to="/tags"
           onClick={handleCloseMenu}
@@ -73,7 +74,6 @@ const MobileNavMenu = () => {
         </MenuItem>
         <MenuItem
           selected={pathname.startsWith('/user')}
-          dense
           component={RouterLink}
           to="/users"
           onClick={handleCloseMenu}
@@ -85,6 +85,8 @@ const MobileNavMenu = () => {
             selected={pathname.startsWith('/library')}
             component={RouterLink}
             to="/library"
+            onClick={handleCloseMenu}
+
           >
             <LibraryBooksIcon className={classes.menuIcon} />
             BM Library
@@ -94,6 +96,8 @@ const MobileNavMenu = () => {
             selected={pathname.startsWith('/about')}
             component={RouterLink}
             to="/about"
+            onClick={handleCloseMenu}
+
           >
             <InfoIcon className={classes.menuIcon} />
             About
@@ -108,13 +112,29 @@ const MobileNavMenu = () => {
             selected={pathname.startsWith('/give-us-feedback')}
             component={RouterLink}
             to="/give-us-feedback"
+            onClick={handleCloseMenu}
+
           >
-            <InfoIcon className={classes.menuIcon} />
+            <FeedbackIcon className={classes.menuIcon} />
             Feedback
           </MenuItem>
 
 
         <Divider />
+
+        <MenuItem
+            selected={pathname.startsWith('/redeem-bm-points')}
+            component={RouterLink}
+            to="/redeem-bm-points"
+            onClick={handleCloseMenu}
+
+          >
+            <RedeemIcon className={classes.menuIcon} />
+            Redeem Your BM Coins
+          </MenuItem>
+          
+        
+
       </Menu>
     </div>
   );

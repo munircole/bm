@@ -9,6 +9,7 @@ import apolloClient from './apolloClient';
 import { AuthProvider } from './context/auth';
 import { StateProvider } from './context/state';
 
+
 ReactDOM.render(
   <ApolloProvider client={apolloClient}>
     <Router>

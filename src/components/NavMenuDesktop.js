@@ -9,6 +9,9 @@ import PeopleIcon from '@material-ui/icons/People';
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import InfoIcon from '@material-ui/icons/Info';
 import WebIcon from '@material-ui/icons/Web';
+import FeedbackIcon from '@material-ui/icons/Feedback';
+import RedeemIcon from '@material-ui/icons/Redeem';
+
 
 
 const DesktopNavMenu = () => {
@@ -79,10 +82,18 @@ const DesktopNavMenu = () => {
             component={RouterLink}
             to="/give-us-feedback"
           >
-            <InfoIcon className={classes.menuIcon} />
+            <FeedbackIcon className={classes.menuIcon} />
             Feedback
           </MenuItem>
 
+          <MenuItem
+            selected={pathname.startsWith('/redeem-bm-points')}
+            component={RouterLink}
+            to="/redeem-bm-points"
+          >
+            <RedeemIcon className={classes.menuIcon} />
+            Redeem Your <br></br> BM Coins
+          </MenuItem>
 
 
 

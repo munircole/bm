@@ -139,7 +139,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
       <form onSubmit={handleSubmit(onRegister)}>
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth
@@ -188,7 +188,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
 
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth
@@ -240,7 +240,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
 
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth
@@ -291,7 +291,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
 
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth
@@ -345,7 +345,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
 
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth
@@ -398,7 +398,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
 
         <div className={classes.input}>
           <div className="row">
-            <div className="col-lg-6" style={{marginBottom: '10px'}}>
+            <div className="col-lg-6" style={{marginBottom: '15px'}}>
               <TextField
                 required
                 fullWidth

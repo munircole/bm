@@ -19,6 +19,7 @@ import Feedback from './feedback/feedback';
 
 import Library from './library/library';
 import Ad from './advertising/ad';
+import Redeem from './redeem';
 
 
 const Routes = () => {
@@ -107,6 +108,11 @@ const Routes = () => {
           <Route exact path="/library">
             <NavMenuDesktop />
             <Library />
+          </Route>
+
+          <Route exact path="/redeem-bm-points">
+            <NavMenuDesktop />
+            <Redeem />
           </Route>
 
           <Route>

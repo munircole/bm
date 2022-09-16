@@ -2,6 +2,12 @@
   "short_name": "BM",
   "name": "Bookishmate",
   "start_url": ".",
+  "icons": [
+    {
+    "src": "./images/bm.png",
+    "type": "image/png"
+    }
+  ],
   "display": "standalone",
   "theme_color": "#f0642b",
   "background_color": "#f0642b"

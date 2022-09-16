@@ -313,9 +313,9 @@ export const useDialogStyles = makeStyles(
 export const useAuthFormStyles = makeStyles(
   (theme) => ({
     root: {
-      paddingLeft: 20,
-      paddingRight: 20,
-      paddingBottom: 20,
+      paddingLeft: '5px',
+      paddingRight: '5px',
+      paddingBottom: '10px',
       [theme.breakpoints.down('xs')]: {
         padding: '0 0 0 0',
       },
@@ -554,7 +554,7 @@ export const useUserPageStyles = makeStyles(
         flexDirection: 'column',
         alignItems: 'center',
         height: '9.5em',
-        marginBottom: '0.5em',
+        marginBottom: '3em',
       },
     },
     avatar: {
