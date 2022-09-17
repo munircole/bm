@@ -307,14 +307,12 @@ export const useDialogStyles = makeStyles(
       fontSize: 32,
     },
   }),
-  { index: 1 }
+  { index: 0}
 );
 
 export const useAuthFormStyles = makeStyles(
   (theme) => ({
     root: {
-      paddingLeft: '5px',
-      paddingRight: '5px',
       paddingBottom: '10px',
       [theme.breakpoints.down('xs')]: {
         padding: '0 0 0 0',
@@ -322,6 +320,9 @@ export const useAuthFormStyles = makeStyles(
     },
     input: {
       marginBottom: '20px',
+      [theme.breakpoints.down('xs')]: {
+        width: '100%',
+      },
     },
     submitButton: {
       marginTop: '1.8em',

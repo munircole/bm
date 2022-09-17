@@ -126,7 +126,7 @@ const AuthFormModal = ({ closeMenu, buttonType }) => {
       <Dialog
         open={modalOpen}
         onClose={handleModalClose}
-        maxWidth="sm"
+        maxWidth="lg"
         classes={{ paper: classes.dialogWrapper }}
       >
         <DialogTitle onClose={handleModalClose}></DialogTitle>

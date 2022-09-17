@@ -2,8 +2,8 @@ import { useStateContext } from '../context/state';
 
 import { IconButton } from '@material-ui/core';
 import { useNavStyles } from '../styles/muiStyles';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeIcon from '@mui/icons-material/LightMode';
 
 const DarkModeSwitch = () => {
   const { darkMode, toggleDarkMode } = useStateContext();
@@ -15,7 +15,7 @@ const DarkModeSwitch = () => {
       onClick={() => toggleDarkMode()}
       className={classes.iconBtn}
     >
-      {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+      {darkMode ? <LightModeIcon /> : <DarkModeIcon />}
     </IconButton>
   );
 };
