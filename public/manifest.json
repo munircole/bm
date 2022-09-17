@@ -1,7 +1,7 @@
 {
   "short_name": "Bookishmate",
   "name": "Bookishmate",
-  "start_url": "index.html",
+  "start_url": ".",
   "icons": [
     {
     "src": "./images/bm.png",
