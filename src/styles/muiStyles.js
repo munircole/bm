@@ -10,7 +10,7 @@ export const useBodyStyles = makeStyles(
       minHeight: '100vH',
     },
   }),
-  { index: 1 }
+  { index: 0 }
 );
 
 export const useNavStyles = makeStyles(

@@ -85,14 +85,7 @@ export const GET_USER = gql`
   query fetchUser($username: String!) {
     getUser(username: $username) {
       id
-      firstName
-      lastName
       username
-      email
-      country
-      contactNumber
-      gender
-      institutionName
       department
       role
       createdAt

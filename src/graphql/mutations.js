@@ -7,8 +7,8 @@ import {
 } from './fragments';
 
 export const REGISTER_USER = gql`
-  mutation registerUser($firstName: String!, $lastName: String!, $username: String!, $email: String!, $country: String!, $contactNumber: String!, $gender: String!, $institutionType: String!, $institutionName: String!, $department: String!, $password: String!) {
-    register(firstName: $firstName, lastName: $lastName, username: $username, email: $email, country: $country, contactNumber: $contactNumber, gender: $gender, institutionType: $institutionType, institutionName: $institutionName, department: $department, password: $password) {
+  mutation registerUser($username: String!, $email: String!, $department: String!, $password: String!) {
+    register(username: $username, email: $email, department: $department, password: $password) {
       ...LoggedUserDetails
     }
   }

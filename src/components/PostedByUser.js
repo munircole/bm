@@ -4,10 +4,7 @@ import { Typography, Link, Avatar } from '@material-ui/core';
 import { useQuesCardStyles } from '../styles/muiStyles';
 
 const ByUser = ({
-  firstName,
-  lastName,
   username,
-  department,
   userId,
   createdAt,
   updatedAt,

@@ -97,8 +97,6 @@ const QuesCard = ({ question }) => {
         <div className={classes.bottomWrapper}>
           <PostedByUser
             username={author.username}
-            firstName = {author.firstName}
-            lastName = {author.lastName}
             department = {author.department}
             userId={author.id}
             createdAt={createdAt}

@@ -13,7 +13,7 @@ import { useUserPageStyles } from '../styles/muiStyles';
 const UserPage = () => {
   const classes = useUserPageStyles();
   const { notify } = useStateContext();
-  const {firstName, lastName, username, country, gender, institutionName, department } = useParams();
+  const {username, department } = useParams();
   const [fetchedUser, setFetchedUser] = useState(null);
   const [fetchUser, { data, loading }] = useLazyQuery(GET_USER, {
     onError: (err) => {
@@ -22,9 +22,9 @@ const UserPage = () => {
   });
 
   useEffect(() => {
-    fetchUser({ variables: { firstName, lastName, username, country, gender, institutionName, department } });
+    fetchUser({ variables: {username, department } });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [firstName, lastName, username, country, gender, institutionName, department]);
+  }, [username, department]);
 
   useEffect(() => {
     if (data) {
@@ -42,12 +42,7 @@ const UserPage = () => {
 
   const {
     id,
-    firstName: Firstname,
-    lastName: Lastname,
     username: userName,
-    country: Country,
-    gender: Gender,
-    institutionName: InstitutionName,
     department: Department,
     createdAt,
     reputation,
@@ -134,30 +129,8 @@ const UserPage = () => {
               variant="body1"
               className={classes.smallText}
             >
-              {'Name: '+ Firstname + ' ' + Lastname}
+              {'Username: '+ username}
             </Typography>
-            <Typography
-              variant="body1"
-              className={classes.smallText}
-            >
-              {'Country: ' + Country}
-            </Typography>
-
-            <Typography
-              variant="body1"
-              className={classes.smallText}
-            >
-              {'Gender: ' + Gender}
-            </Typography>
-
-
-            <Typography
-              variant="body1"
-              className={classes.smallText}
-            >
-              {'Institution Name: ' + InstitutionName}
-            </Typography>
-
 
             <Typography
               variant="body1"

@@ -27,21 +27,9 @@ import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import EmailIcon from '@material-ui/icons/Email';
-import PhoneIcon from '@material-ui/icons/Phone';
-import PublicIcon from '@material-ui/icons/Public';
-import WcIcon from '@material-ui/icons/Wc';
-import SchoolIcon from '@material-ui/icons/School';
 import CreateIcon from '@material-ui/icons/Create';
 
 const validationSchema = yup.object({
-  firstName: yup
-    .string()
-    .required('Required'),
-  lastName: yup
-    .string()
-    .required('Required'),
-  
-  
   username: yup
     .string()
     .required('Required')
@@ -55,26 +43,6 @@ const validationSchema = yup.object({
     .string()
     .required('Required'),
   
-  country: yup
-    .string()
-    .required('Required'),
-
-  gender: yup
-    .string()
-    .required('Required'),
-  
-  contactNumber: yup
-    .string()
-    .required('Required'),
-  
-  institutionType: yup
-    .string()
-    .required('Required'),
-
-  institutionName: yup
-    .string()
-    .required('Required'),
-
   department: yup
     .string()
     .required('Required'),
@@ -107,12 +75,12 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
     },
   });
 
-  const onRegister = ({firstName, lastName, username, email, country, contactNumber, gender, institutionType, institutionName, department, password, confirmPassword }) => {
+  const onRegister = ({username, email, department, password, confirmPassword }) => {
     if (password !== confirmPassword)
       return setErrorMsg('Both passwords need to match.');
 
     registerUser({
-      variables: {firstName, lastName, username, email, country, contactNumber, gender, institutionType, institutionName, department, password },
+      variables: {username, email, department, password },
       update: (_, { data }) => {
         setUser(data.register);
         notify(
@@ -139,56 +107,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
       <form onSubmit={handleSubmit(onRegister)}>
         <div className={classes.input}>
           <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="firstName"
-                type="text"
-                label="First Name"
-                variant="outlined"
-                size="small"
-                error={'firstName' in errors}
-                helperText={'firstName' in errors ? errors.firstName.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <CreateIcon  />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </div>
-
-            <div className="col-lg-6" >
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="lastName"
-                type="text"
-                label="Last Name"
-                variant="outlined"
-                size="small"
-                error={'lastName' in errors}
-                helperText={'lastName' in errors ? errors.lastName.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <CreateIcon  />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </div>
-          </div>
-        </div>
-
-
-        <div className={classes.input}>
-          <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
+            <div className={classes.input} >
               <TextField
                 required
                 fullWidth
@@ -210,7 +129,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
               />
             </div>
 
-            <div className="col-lg-6">
+            <div className={classes.input}>
               <TextField
                 required
                 fullWidth
@@ -231,143 +150,12 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
                 }}
               />
             </div>
-          </div>
-        </div>
 
 
 
 
 
-        <div className={classes.input}>
-          <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="country"
-                type="text"
-                label="Country"
-                variant="outlined"
-                size="small"
-                error={'country' in errors}
-                helperText={'country' in errors ? errors.country.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <PublicIcon  />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </div>
-
-            <div className="col-lg-6">
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="contactNumber"
-                type="number"
-                label="Contact Number"
-                variant="outlined"
-                size="small"
-                error={'contactNumber' in errors}
-                helperText={'contactNumber' in errors ? errors.contactNumber.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <PhoneIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <small>include country code</small>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div className={classes.input}>
-          <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="gender"
-                type="text"
-                label="Gender"
-                variant="outlined"
-                size="small"
-                error={'gender' in errors}
-                helperText={'gender' in errors ? errors.gender.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <WcIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              >
-              </TextField>
-              
-            </div>
-
-            <div className="col-lg-6">
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="institutionType"
-                type="text"
-                placeholder="E.g: university"
-                label="Type Of Institution"
-                variant="outlined"
-                size="small"
-                error={'institutionType' in errors}
-                helperText={'institutionType' in errors ? errors.institutionType.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SchoolIcon/>
-                    </InputAdornment>
-                  ),
-                }}
-              >
-              </TextField>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div className={classes.input}>
-          <div className="row" >
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
-              <TextField
-                required
-                fullWidth
-                inputRef={register}
-                name="institutionName"
-                type="text"
-                label="Name of Institution"
-                variant="outlined"
-                size="small"
-                error={'institutionName' in errors}
-                helperText={'institutionName' in errors ? errors.institutionName.message : ''}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SchoolIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-            </div>
-
-            <div className="col-lg-6">
+            <div className={classes.input}>
               <TextField
                 required
                 fullWidth
@@ -389,16 +177,12 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
                 }}
               />
             </div>
-          </div>
-        </div>
 
 
 
 
 
-        <div className={classes.input}>
-          <div className="row">
-            <div className="col-lg-6" style={{marginBottom: '15px'}}>
+            <div className={classes.input}>
               <TextField
                 required
                 fullWidth
@@ -435,7 +219,7 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
             </div>
 
 
-            <div className="col-lg-6">
+            <div className={classes.input}>
               <TextField
                 required
                 fullWidth
@@ -472,8 +256,8 @@ const RegisterForm = ({ setAuthType, closeModal }) => {
                 }}
               />
             </div>
-          </div>
-        </div>
+            </div>
+            </div>
 
         <Typography variant="body1" className={classes.footerText}>
         By clicking submit, you agree to our  {' '}

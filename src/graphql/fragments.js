@@ -4,8 +4,6 @@ export const AUTHOR_DETAILS = gql`
   fragment AuthorDetails on Author {
     id
     username
-    firstName
-    lastName
     department
 
   }
@@ -78,14 +76,8 @@ export const QUESTION_DETAILS = gql`
 export const LOGGED_USER_DETAILS = gql`
   fragment LoggedUserDetails on LoggedUser {
     id
-    firstName
-    lastName
     username
     email
-    country
-    contactNumber
-    gender
-    institutionName
     department
     role
     token
