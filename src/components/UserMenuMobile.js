@@ -5,6 +5,8 @@ import AuthFormModal from './AuthFormModal';
 import { IconButton, Menu, MenuItem, Avatar } from '@material-ui/core';
 import { useMenuStyles } from '../styles/muiStyles';
 import LoginIcon from '@mui/icons-material/Login';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
@@ -34,7 +36,7 @@ const MobileUserMenu = ({ user, logoutUser }) => {
             src={`https://secure.gravatar.com/avatar/${user.id}?s=164&d=identicon`}
             className={classes.avatar}
           />
-          <LoginIcon/>
+          <MoreVertIcon/>
         </IconButton>
       ) : (
         <IconButton
@@ -42,8 +44,7 @@ const MobileUserMenu = ({ user, logoutUser }) => {
           color="primary"
           className={classes.moreBtn}
         >
-          <LoginIcon 
- />
+          <LoginIcon/>
         </IconButton>
       )}
       <Menu

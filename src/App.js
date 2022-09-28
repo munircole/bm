@@ -10,6 +10,7 @@ import { Paper } from '@material-ui/core/';
 import { ThemeProvider } from '@material-ui/core/styles';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import ScrollToTop from './components/scrollToTop';
 
 const App = () => {
   const { darkMode } = useStateContext();
@@ -18,6 +19,7 @@ const App = () => {
   return (
     <ThemeProvider theme={customTheme(darkMode)}>
       <Paper className={classes.root} elevation={0}>
+        <ScrollToTop/>
         <ToastNotification />
         <NavBar />
         <Routes />
