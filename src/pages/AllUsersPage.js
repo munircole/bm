@@ -52,7 +52,7 @@ const AllUsersPage = () => {
           {data.getAllUsers
             .filter((u) =>
               u.username.toLowerCase().includes(filterInput.toLowerCase())
-            )
+            ).reverse()
             .map((u) => (
               <div key={u.id} className={classes.userBox}>
                 <Avatar
